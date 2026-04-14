@@ -1,0 +1,37 @@
+.form-registro {
+    max-width: 400px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-registro label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-registro input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-registro button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background: #2f5d34;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-registro button:hover {
+    background: #3e7a45;
+}

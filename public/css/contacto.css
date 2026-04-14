@@ -1,0 +1,48 @@
+/* ===== CONTACTO ===== */
+
+.contacto {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contacto-container {
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+
+}
+
+/* Título */
+.contacto h1 {
+    margin-bottom: 20px;
+}
+
+/* Info */
+.contacto-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contacto-info a {
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Imagen */
+.contacto-img img {
+    width: 400px;
+    margin: 20px 0;
+}
+
+/* Mapa */
+.mapa {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}

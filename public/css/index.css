@@ -1,0 +1,147 @@
+/* HERO */
+.hero {
+    height: 60vh;
+
+    background-color: #768b75; /* 🔥 fallback si no carga imagen */
+
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('../img/leña.jpeg');
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: green;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* BLOQUES */
+.bloque {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+.bloque.reverse {
+    flex-direction: row-reverse;
+}
+
+.bloque-texto {
+    flex: 1;
+}
+
+.bloque-img {
+    flex: 1;
+}
+
+.bloque-img img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* 🔥 SOLO para la primera imagen */
+.bloque:first-of-type .bloque-img img {
+    height: 250px;
+}
+
+@media (max-width: 768px) {
+
+    .bloque-texto p {
+        font-size: 16px; /* 🔥 más legible */
+    }
+
+    .bloque-texto h2 {
+        font-size: 20px;
+    }
+}
+
+.carrito-container a {
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.carrito-container strong {
+    margin: 0 5px;
+}
+
+.tabla-carrito {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla-carrito th {
+    background: #2f5d34;
+    color: white;
+    padding: 10px;
+}
+
+.tabla-carrito td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-carrito tr:hover {
+    background: #f5f5f5;
+}
+
+/* Botones */
+.btn-cantidad {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 5px;
+    background: #eee;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-cantidad:hover {
+    background: #2f5d34;
+    color: white;
+}
+
+.btn-eliminar {
+    color: red;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.btn-eliminar:hover {
+    color: darkred;
+}
+
+/* Total */
+.total {
+    text-align: center;
+    margin-top: 20px;
+}

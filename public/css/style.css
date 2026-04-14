@@ -1,0 +1,442 @@
+/* ===== BASE ===== */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    margin: 0;
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: #2e4d2c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    font-size: 22px;
+    color: #cfcfcf;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu a.active {
+    color: black;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+.menu span {
+    color: white;
+    margin: 5px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center; /* 🔥 alinea emoji + texto */
+}
+
+/* ===== PRODUCTOS ===== */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+    max-width: 1200px;   /* 🔥 límite */
+    margin: 0 auto;      /* 🔥 centrado */
+    width: 100%;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+.carrito{
+    font-size: 15px;
+}
+
+
+/* ===== CARRITO ===== */
+.carrito-container {
+    flex: 1;
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-carrito:last-child {
+    border-bottom: none;
+}
+
+.total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.vacio {
+    text-align: center;
+    color: gray;
+}
+
+/* ===== LOGIN ===== */
+.form-container {
+    width: 300px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.form-container button {
+    width: 100%;
+    background: green;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #2e4d2c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+.ia-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2e7d32;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.ia-box {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+}
+
+#ia-chat {
+    height: 150px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 90px; /* 🔥 SUBE ESTE */
+    right: 20px;  /* 🔥 MISMO LADO QUE IA */
+    background: #25D366;
+    color: white;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== MÓVIL ===== */
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto h2 {
+        font-size: 18px;
+    }
+
+    .producto p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .carrito-container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .item-carrito {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .total {
+        text-align: left;
+    }
+}
+
+
+/* detalle pedido */
+.detalle-container {
+    max-width: 800px;
+    margin: 80px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 25px;
+}
+
+.detalle-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detalle-container p {
+    font-size: 25px;
+    margin: 8px 0;
+}
+
+.detalle-container h3 {
+    margin-top: 20px;
+}
+
+.detalle-container a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+}
+
+/* logo */
+
+.logo img {
+    height: 60px; /* ajusta a tu gusto */
+    width: auto;
+    display: block;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;         /* más grande */
+    width: auto;
+    border-radius: 12px;    /* bordes redondeados */
+    object-fit: cover;      /* recorte limpio */
+    padding: 5px;           /* aire alrededor */
+    background: white;      /* opcional: queda muy pro */
+}
+
+.tipo {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    min-width: 80px;
+
+    background: #999;   /* 👈 fallback */
+    color: white;
+}
+
+
+.tipo.encina { background: #5a3e1b; }
+.tipo.olivo { background: #6b8e23; }
+.tipo.pino { background: #2e8b57; }
+.tipo.mixto {
+    background: #757575;
+    color: white;
+}
+
+.alert-success {
+    width: 300px;
+    margin: 20px auto;
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* ===== FIX TABLA CARRITO ===== */
+
+.tabla-carrito {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-size: 16px; /* 🔥 tamaño normal */
+}
+
+.tabla-carrito th,
+.tabla-carrito td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Cabecera */
+.tabla-carrito th {
+    background: #2f5d34;
+    color: white;
+}
+
+/* Producto alineado a la izquierda */
+.tabla-carrito td:first-child {
+    text-align: left;
+}
+
+/* Ajuste columnas */
+.tabla-carrito td:nth-child(2),
+.tabla-carrito td:nth-child(4) {
+    white-space: nowrap;
+}
+
+.filtro-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.filtro-form input,
+.filtro-form select {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
